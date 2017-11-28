@@ -15,19 +15,16 @@ var port = process.env.PORT || 8080;
 
 // ROUTES
 // =============================================================================
-var router = express.Router();
-
-router.use(function (req, res, next) {
-    console.log('Something is happening.');
+app.use(function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
 
-router.all('/time', function (req, res) {
+app.all('/time', function (req, res) {
     const time = moment.utc();
-    const ip = req
-        .headers['x-forwarded-for']
-        .split(',')
-        .pop() || req.connection.remoteAddress || req.socket.remoteAddress || (req.connection.socket
+    const ip = req.headers['x-forwarded-for'] && req.headers['x-forwarded-for'].split(',').pop()
+        || req.connection.remoteAddress || req.socket.remoteAddress || (req.connection.socket
         ? req.connection.socket.remoteAddress
         : null);
 
@@ -38,9 +35,9 @@ router.all('/time', function (req, res) {
     });
 });
 
-// REGISTER OUR ROUTES
-// =============================================================================
-app.use('/', router);
+app.all('*', function (req, res) {
+    res.redirect(301, '/time');
+});
 
 // START THE SERVER
 // =============================================================================
