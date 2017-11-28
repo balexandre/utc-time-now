@@ -1,0 +1,29 @@
+{
+  "name": "utc-time-now",
+  "version": "1.0.0",
+  "description": "Just a simple time now api",
+  "main": "server.js",
+  "engines": {
+    "npm": "5.5.x",
+    "node": "8.9.x"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/balexandre/utc-time-now.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/balexandre/utc-time-now/issues"
+  },
+  "homepage": "https://github.com/balexandre/utc-time-now#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "moment": "^2.19.2"
+  }
+}
