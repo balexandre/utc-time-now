@@ -16,14 +16,19 @@
     "url": "git+https://github.com/balexandre/utc-time-now.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Bruno Alexandre <about.me/balexandre>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/balexandre/utc-time-now/issues"
   },
   "homepage": "https://github.com/balexandre/utc-time-now#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "express": "^4.16.2",
-    "moment": "^2.19.2"
+    "moment": "^2.19.2",
+    "morgan": "^1.9.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
   }
 }
