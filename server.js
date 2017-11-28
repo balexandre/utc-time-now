@@ -20,11 +20,11 @@ router.get('/', function (req, res) {
     const time = moment.utc();
     res.json({
         iso: time.toISOString(),
-        date: time.format('DD-MM-YYYY HH:mm:ss')
+        date: time.format('YYYY-MM-DD HH:mm:ss')
     });
 });
 
-app.use('/api', router);
+app.use('/time', router);
 
 // START THE SERVER
 // =============================================================================
