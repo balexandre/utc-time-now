@@ -1,0 +1,14 @@
+@HOST = http://localhost:8080
+
+GET {{HOST}}/time
+Content-Type: application/json
+
+###
+
+GET {{HOST}}/
+Content-Type: application/json
+
+###
+
+GET {{HOST}}/stats/::ffff:127.0.0.1
+Content-Type: application/json
