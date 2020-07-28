@@ -15,9 +15,9 @@ will return
 
 ```json
 {
-  iso: "2017-11-28T20:03:29.573Z",
-  date: "2017-11-28 20:03:29",
-  ip: "YOUR_IP"
+  "iso": "2017-11-28T20:03:29.573Z",
+  "date": "2017-11-28 20:03:29",
+  "ip": "YOUR_IP"
 }
 ```
 
@@ -34,8 +34,8 @@ will return
 
 ```json
 {
-  ip: "YOUR_IP",
-  totalCount: 29
+  "ip": "YOUR_IP",
+  "totalCount": 29
 }
 ```
 
