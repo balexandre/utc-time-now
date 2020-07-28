@@ -23,7 +23,7 @@ will return
 
 ## Extending with stats
 
-Using Mongo DB, I've also created a super simple statistics that all it does is count the times a give IP Address has requested the current time
+Using MongoDB, I've also created a super simple statistics that all it does is count the times a give IP Address has requested the current time
 
 ```text
 GET {{HOST}}/stats/:ip_address
@@ -43,11 +43,11 @@ any other path will redirect to `/time`
 
 ## MongoDB is optional
 
-you can easily run only the Time API without mongoDB, just remove the call to the `routes/stats.js` file, the `model` folder as well the line for the `/stats/:ip` route in `server.js` file
+you can easily run only the Time API without MongoDB, just remove the call to the `routes/stats.js` file, the `model` folder as well the line for the `/stats/:ip` route in `server.js` file
 
 # Run with Docker
 
-as Heroku lost the ability to have a MongoDB for free, I choose to containerize the entire solution; the `docker-compose.yml` has a simple setup that makes this web application run together with the mongoDB image
+as Heroku lost the ability to have a MongoDB for free, I choose to containerize the entire solution; the `docker-compose.yml` has a simple setup that makes this web application run together with the MongoDB image
 
 just build and started with
 
