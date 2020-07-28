@@ -83,3 +83,15 @@ Links             : {}
 ParsedHtml        : mshtml.HTMLDocumentClass
 RawContentLength  : 123
 ```
+
+# Available on Heroku
+
+the API is available on [Heroku](https://heroku.com) as https://utc-time-now.herokuapp.com/ (it is running on a free server, so it will sleep if no traffic for the last 30min)
+
+as they [no longer support MongoDB](https://devcenter.heroku.com/changelog-items/1823) as a free Add-on and, you can [only push the `Dockerfile`](https://devcenter.heroku.com/articles/local-development-with-docker-compose) and not the `docker-compose` file, the `/stats` route **is not available**
+
+to test, go to the jQuery website, open the browser console and run
+
+```javascript
+$.getJSON('https://utc-time-now.herokuapp.com/time', json => console.log(json))
+```
