@@ -1,5 +1,5 @@
 const moment = require('moment');
-const db = require('./../models');
+const db = require('../models');
 
 exports.get = (req, res) => {
     const time = moment.utc();

@@ -1,4 +1,4 @@
-const db = require('./../models');
+const db = require('../models');
 
 exports.get = (req, res) => {
     const { ip } = req.params;

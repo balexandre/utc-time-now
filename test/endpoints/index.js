@@ -1,12 +1,13 @@
 // for when using mocha sidebar
-require('dotenv').config();
+// require('dotenv').config();
 
 process.env.APP_ENVIRONMENT = 'test';
+process.env.MONGODB_URI = 'mongodb://localhost:27017/utc_now';
 
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 
-const app = require('./../../server/server');
+const app = require('../../server/server');
 
 chai.use(chaiHttp);
 
@@ -21,9 +22,7 @@ const preCheckRequest = (res, statusCodeToCheck) => {
 };
 
 const getServerRequest = (url, response) => {
-    chai.request(server)
-        .get(url)
-        .end(response);
+    chai.request(server).get(url).end(response);
 };
 
 exports.server = server;
