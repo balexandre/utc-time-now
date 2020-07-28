@@ -17,6 +17,7 @@ will return
 {
   "iso": "2017-11-28T20:03:29.573Z",
   "date": "2017-11-28 20:03:29",
+  "dateFormat": "YYYY-MM-DD HH:mm:ss",
   "ip": "YOUR_IP"
 }
 ```
