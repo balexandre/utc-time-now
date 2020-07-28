@@ -1,6 +1,6 @@
 {
   "name": "utc-time-now",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Just a simple time now api",
   "main": "server.js",
   "engines": {
@@ -8,7 +8,7 @@
     "node": "10"
   },
   "scripts": {
-    "test": "mocha",
+    "test": "mocha --recursive \"./test/**/*.spec.js\" --exit",
     "start": "node ./server/server.js",
     "test:lint": ".//node_modules/.bin/eslint ./**/*.js"
   },
@@ -17,7 +17,9 @@
     "url": "git+https://github.com/balexandre/utc-time-now.git"
   },
   "keywords": [
-    ""
+    "api",
+    "time",
+    "utc"
   ],
   "author": "Bruno Alexandre",
   "license": "MIT",
@@ -26,23 +28,23 @@
   },
   "homepage": "https://github.com/balexandre/utc-time-now#readme",
   "dependencies": {
-    "dotenv": "^8.1.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
-    "moment": "^2.24.0",
-    "mongoose": "^5.7.5",
-    "morgan": "^1.9.1"
+    "moment": "^2.27.0",
+    "mongoose": "^5.9.26",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
-    "eslint": "^6.5.1",
-    "eslint-config-airbnb": "^18.0.1",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-config-prettier": "^6.4.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-prettier": "^3.1.1",
-    "mocha": "^6.2.1",
-    "nodemon": "^1.19.3",
-    "prettier": "^1.18.2"
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "mocha": "^8.0.1",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.0.5"
   }
 }
