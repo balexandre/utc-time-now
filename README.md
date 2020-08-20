@@ -48,7 +48,7 @@ you can easily run only the Time API without MongoDB, just remove the call to th
 
 # Run with Docker
 
-as Heroku lost the ability to have a MongoDB for free, I choose to containerize the entire solution; the `docker-compose.yml` has a simple setup that makes this web application run together with the MongoDB image
+as Heroku lost the [ability to have a MongoDB for free](https://devcenter.heroku.com/changelog-items/1823), I choose to containerize the entire solution; the `docker-compose.yml` has a simple setup that makes this web application run together with the MongoDB image
 
 just build and started with
 
