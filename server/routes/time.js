@@ -17,8 +17,6 @@ exports.get = (req, res) => {
     // log request
     db.models.customer({ ip }).save((err, data) => {
         if (err) throw err;
-        // eslint-disable-next-line no-console
-        console.log('Request logged!');
     });
 
     // return object
